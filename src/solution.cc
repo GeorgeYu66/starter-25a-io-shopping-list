@@ -10,3 +10,4 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
 
   return shopping_items;
 }
+fasdhfsaf

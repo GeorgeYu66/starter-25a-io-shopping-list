@@ -11,9 +11,8 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
     throw std::invalid_argument("NMSL");
   }
   std::vector<Item> shopping_items;
-  while (nmsl.good()) {
-    Item cnm;
-    nmsl >> cnm.item_name >> cnm.quantity >> cnm.price;
+  Item cnm;
+  while (nmsl >> cnm.item_name >> cnm.quantity >> cnm.price) {
     if (nmsl.fail()) {
       throw std::invalid_argument("NMSL");
     }

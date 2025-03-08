@@ -11,6 +11,9 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
   if (!nmsl.is_open()) {
     throw std::invalid_argument("NMSL");
   }
+  if (file.peek() == std::ifstream::traits_type::eof()) {
+    return {};
+  }
   std::vector<Item> shopping_items;
   Item cnm;
   while (nmsl.good()) {

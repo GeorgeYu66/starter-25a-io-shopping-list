@@ -11,13 +11,13 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
     throw std::invalid_argument("NMSL");
   }
   std::vector<Item> shopping_items;
-  Item cnm;
   while (nmsl.good()) {
+    Item cnm;
     std::cin >> cnm.item_name >> cnm.quantity >> cnm.price;
-    shopping_items.push_back(cnm);
     if (nmsl.fail()) {
       throw std::invalid_argument("NMSL");
     }
+    shopping_items.push_back(cnm);
   }
   if (shopping_items.empty()) {
     throw std::invalid_argument("NMSL");

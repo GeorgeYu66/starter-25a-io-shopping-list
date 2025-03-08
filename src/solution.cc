@@ -13,7 +13,7 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
   std::vector<Item> shopping_items;
   while (nmsl.good()) {
     Item cnm;
-    std::cin >> cnm.item_name >> cnm.quantity >> cnm.price;
+    nmsl >> cnm.item_name >> cnm.quantity >> cnm.price;
     if (nmsl.fail()) {
       throw std::invalid_argument("NMSL");
     }

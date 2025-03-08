@@ -22,8 +22,5 @@ std::vector<Item> LoadShoppingItemsFromFile(const std::string& filename) {
       shopping_items.push_back(cnm);
     }
   }
-  if (shopping_items.empty()) {
-    throw std::invalid_argument("NMSL");
-  }
   return shopping_items;
 }
